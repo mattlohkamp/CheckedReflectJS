@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title></title>
+    <style>
+      label.checked {
+        font-weight:bold;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <h1>Custom Pie</h1>
+      <fieldset>
+        <legend><h2>Pick A Flavour:</h2></legend>
+        <ol>
+          <li><label><input type="radio" name="flavourOptions" id="flavour-salty" value="salty" /><span>Salty</span></label></li>
+          <li><label><input type="radio" name="flavourOptions" id="flavour-sweet" value="sweet" /><span>Sweet</span></label></li>
+          <li><label><input type="radio" name="flavourOptions" id="flavour-spicy" value="spicy" /><span>Spicy</span></label></li>
+        </ol>
+      </fieldset>
+      <fieldset>
+        <legend><h2>Choose Your Ingredients:</h2></legend>
+        <ul>
+          <li><input type="checkbox" name="ingredientOptions" id="ingredient-apples" value="apples" />
+            <label for="ingredient-apples">Apples</label></li>
+          <li><input type="checkbox" name="ingredientOptions" id="ingredient-peaches" value="peaches" />
+            <label for="ingredient-peaches">Peaches</label></li>
+          <li><input type="checkbox" name="ingredientOptions" id="ingredient-pears" value="pears" />
+            <label for="ingredient-pears">Pears</label></li>
+        </ul>
+      </fieldset>
+    </form>
+    <script src="CheckedReflect.js"></script>
+    <script>
+        //  apply to all checkboxes and radio buttons
+      CheckedReflect(document.querySelectorAll('input[type=radio],input[type=checkbox]'),'checked')
+    </script>
+  </body>
+</html>
